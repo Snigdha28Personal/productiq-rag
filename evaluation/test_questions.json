@@ -1,0 +1,95 @@
+[
+  {
+    "id": "q1",
+    "question": "What are the top onboarding friction points?",
+    "expected_sources": ["customer_interviews.pdf", "support_tickets.md", "product_feedback.docx"],
+    "expected_answer_keywords": ["workspace settings", "45 minutes", "setup checklist", "confusing"]
+  },
+  {
+    "id": "q2",
+    "question": "What complaints do customers have about pricing and billing?",
+    "expected_sources": ["support_tickets.md", "user_survey.txt", "product_feedback.docx"],
+    "expected_answer_keywords": ["higher than expected", "tier upgrades", "billing threshold", "checkout"]
+  },
+  {
+    "id": "q3",
+    "question": "What integrations are enterprise customers requesting?",
+    "expected_sources": ["support_tickets.md", "enterprise_interviews.md", "customer_interviews.pdf"],
+    "expected_answer_keywords": ["Slack", "Jira", "Zapier"]
+  },
+  {
+    "id": "q4",
+    "question": "What are the main security requirements for enterprise buyers?",
+    "expected_sources": ["support_tickets.md", "enterprise_interviews.md", "user_survey.txt"],
+    "expected_answer_keywords": ["SAML SSO", "Okta", "role-based access control", "admin audit logs"]
+  },
+  {
+    "id": "q5",
+    "question": "What analytics export capabilities do users need?",
+    "expected_sources": ["support_tickets.md", "user_survey.txt", "customer_interviews.pdf"],
+    "expected_answer_keywords": ["PDF export", "CSV", "screenshotting", "custom chart filtering"]
+  },
+  {
+    "id": "q6",
+    "question": "Compare enterprise and SMB customer pain points.",
+    "expected_sources": ["enterprise_interviews.md", "support_tickets.md", "user_survey.txt"],
+    "expected_answer_keywords": ["Enterprise", "SMB", "security", "pricing"]
+  },
+  {
+    "id": "q7",
+    "question": "How long does initial workspace configuration take for users?",
+    "expected_sources": ["customer_interviews.pdf", "support_tickets.md", "product_feedback.docx"],
+    "expected_answer_keywords": ["45 minutes", "support intervention"]
+  },
+  {
+    "id": "q8",
+    "question": "What is our Q4 financial revenue forecast?",
+    "expected_sources": [],
+    "expected_answer_keywords": [],
+    "should_be_insufficient": true
+  },
+  {
+    "id": "q9",
+    "question": "Who is our main competitor in Europe?",
+    "expected_sources": [],
+    "expected_answer_keywords": [],
+    "should_be_insufficient": true
+  },
+  {
+    "id": "q10",
+    "question": "What do users say about Slack notifications?",
+    "expected_sources": ["support_tickets.md", "enterprise_interviews.md", "customer_interviews.pdf"],
+    "expected_answer_keywords": ["real-time Slack alerts", "critical"]
+  },
+  {
+    "id": "q11",
+    "question": "How many customer comments mentioned setup difficulty during week 1?",
+    "expected_sources": ["support_tickets.md", "customer_interviews.pdf"],
+    "expected_answer_keywords": ["14 customer comments"]
+  },
+  {
+    "id": "q12",
+    "question": "Why do users want two-way Jira synchronization?",
+    "expected_sources": ["support_tickets.md", "enterprise_interviews.md"],
+    "expected_answer_keywords": ["convert pain points into Jira issues", "backlog tickets"]
+  },
+  {
+    "id": "q13",
+    "question": "What is the employee count threshold for Enterprise prospects in our research?",
+    "expected_sources": ["enterprise_interviews.md"],
+    "expected_answer_keywords": ["1000+ employees"]
+  },
+  {
+    "id": "q14",
+    "question": "What is the office address of our San Francisco headquarters?",
+    "expected_sources": [],
+    "expected_answer_keywords": [],
+    "should_be_insufficient": true
+  },
+  {
+    "id": "q15",
+    "question": "What issues do SMB users report when adding user seats?",
+    "expected_sources": ["support_tickets.md", "user_survey.txt"],
+    "expected_answer_keywords": ["seat count", "crossed from 10 to 11", "$49/mo to $149/mo"]
+  }
+]

@@ -1,0 +1,412 @@
+{
+  "embedding_mode": "Local Demo",
+  "total_questions": 15,
+  "retrieval_recall_pct": 80.0,
+  "citation_accuracy_pct": 61.3,
+  "grounded_answer_rate_pct": 80.0,
+  "detailed_results": [
+    {
+      "id": "q1",
+      "question": "What are the top onboarding friction points?",
+      "should_be_insufficient": false,
+      "expected_sources": [
+        "customer_interviews.pdf",
+        "product_feedback.docx",
+        "support_tickets.md"
+      ],
+      "retrieved_sources": [
+        "product_feedback.docx",
+        "user_survey.txt",
+        "customer_interviews.pdf",
+        "enterprise_interviews.md",
+        "support_tickets.md"
+      ],
+      "cited_sources": [
+        "product_feedback.docx",
+        "user_survey.txt",
+        "customer_interviews.pdf",
+        "enterprise_interviews.md",
+        "support_tickets.md"
+      ],
+      "recall": 1.0,
+      "citation_accuracy": 0.6,
+      "grounded_correct": true,
+      "is_insufficient_evidence_response": false
+    },
+    {
+      "id": "q2",
+      "question": "What complaints do customers have about pricing and billing?",
+      "should_be_insufficient": false,
+      "expected_sources": [
+        "product_feedback.docx",
+        "user_survey.txt",
+        "support_tickets.md"
+      ],
+      "retrieved_sources": [
+        "product_feedback.docx",
+        "user_survey.txt",
+        "customer_interviews.pdf",
+        "enterprise_interviews.md",
+        "support_tickets.md"
+      ],
+      "cited_sources": [
+        "product_feedback.docx",
+        "user_survey.txt",
+        "customer_interviews.pdf",
+        "enterprise_interviews.md",
+        "support_tickets.md"
+      ],
+      "recall": 1.0,
+      "citation_accuracy": 0.6,
+      "grounded_correct": true,
+      "is_insufficient_evidence_response": false
+    },
+    {
+      "id": "q3",
+      "question": "What integrations are enterprise customers requesting?",
+      "should_be_insufficient": false,
+      "expected_sources": [
+        "customer_interviews.pdf",
+        "enterprise_interviews.md",
+        "support_tickets.md"
+      ],
+      "retrieved_sources": [
+        "product_feedback.docx",
+        "user_survey.txt",
+        "customer_interviews.pdf",
+        "enterprise_interviews.md",
+        "support_tickets.md"
+      ],
+      "cited_sources": [
+        "product_feedback.docx",
+        "user_survey.txt",
+        "customer_interviews.pdf",
+        "enterprise_interviews.md",
+        "support_tickets.md"
+      ],
+      "recall": 1.0,
+      "citation_accuracy": 0.6,
+      "grounded_correct": true,
+      "is_insufficient_evidence_response": false
+    },
+    {
+      "id": "q4",
+      "question": "What are the main security requirements for enterprise buyers?",
+      "should_be_insufficient": false,
+      "expected_sources": [
+        "enterprise_interviews.md",
+        "user_survey.txt",
+        "support_tickets.md"
+      ],
+      "retrieved_sources": [
+        "product_feedback.docx",
+        "user_survey.txt",
+        "customer_interviews.pdf",
+        "enterprise_interviews.md",
+        "support_tickets.md"
+      ],
+      "cited_sources": [
+        "product_feedback.docx",
+        "user_survey.txt",
+        "customer_interviews.pdf",
+        "enterprise_interviews.md",
+        "support_tickets.md"
+      ],
+      "recall": 1.0,
+      "citation_accuracy": 0.6,
+      "grounded_correct": true,
+      "is_insufficient_evidence_response": false
+    },
+    {
+      "id": "q5",
+      "question": "What analytics export capabilities do users need?",
+      "should_be_insufficient": false,
+      "expected_sources": [
+        "customer_interviews.pdf",
+        "user_survey.txt",
+        "support_tickets.md"
+      ],
+      "retrieved_sources": [
+        "product_feedback.docx",
+        "user_survey.txt",
+        "customer_interviews.pdf",
+        "enterprise_interviews.md",
+        "support_tickets.md"
+      ],
+      "cited_sources": [
+        "product_feedback.docx",
+        "user_survey.txt",
+        "customer_interviews.pdf",
+        "enterprise_interviews.md",
+        "support_tickets.md"
+      ],
+      "recall": 1.0,
+      "citation_accuracy": 0.6,
+      "grounded_correct": true,
+      "is_insufficient_evidence_response": false
+    },
+    {
+      "id": "q6",
+      "question": "Compare enterprise and SMB customer pain points.",
+      "should_be_insufficient": false,
+      "expected_sources": [
+        "enterprise_interviews.md",
+        "user_survey.txt",
+        "support_tickets.md"
+      ],
+      "retrieved_sources": [
+        "product_feedback.docx",
+        "user_survey.txt",
+        "customer_interviews.pdf",
+        "enterprise_interviews.md",
+        "support_tickets.md"
+      ],
+      "cited_sources": [
+        "product_feedback.docx",
+        "user_survey.txt",
+        "customer_interviews.pdf",
+        "enterprise_interviews.md",
+        "support_tickets.md"
+      ],
+      "recall": 1.0,
+      "citation_accuracy": 0.6,
+      "grounded_correct": true,
+      "is_insufficient_evidence_response": false
+    },
+    {
+      "id": "q7",
+      "question": "How long does initial workspace configuration take for users?",
+      "should_be_insufficient": false,
+      "expected_sources": [
+        "customer_interviews.pdf",
+        "product_feedback.docx",
+        "support_tickets.md"
+      ],
+      "retrieved_sources": [
+        "product_feedback.docx",
+        "user_survey.txt",
+        "customer_interviews.pdf",
+        "enterprise_interviews.md",
+        "support_tickets.md"
+      ],
+      "cited_sources": [
+        "product_feedback.docx",
+        "user_survey.txt",
+        "customer_interviews.pdf",
+        "enterprise_interviews.md",
+        "support_tickets.md"
+      ],
+      "recall": 1.0,
+      "citation_accuracy": 0.6,
+      "grounded_correct": true,
+      "is_insufficient_evidence_response": false
+    },
+    {
+      "id": "q8",
+      "question": "What is our Q4 financial revenue forecast?",
+      "should_be_insufficient": true,
+      "expected_sources": [],
+      "retrieved_sources": [
+        "product_feedback.docx",
+        "user_survey.txt",
+        "customer_interviews.pdf",
+        "enterprise_interviews.md",
+        "support_tickets.md"
+      ],
+      "cited_sources": [
+        "product_feedback.docx",
+        "user_survey.txt",
+        "customer_interviews.pdf",
+        "enterprise_interviews.md",
+        "support_tickets.md"
+      ],
+      "recall": 0.0,
+      "citation_accuracy": 1.0,
+      "grounded_correct": false,
+      "is_insufficient_evidence_response": false
+    },
+    {
+      "id": "q9",
+      "question": "Who is our main competitor in Europe?",
+      "should_be_insufficient": true,
+      "expected_sources": [],
+      "retrieved_sources": [
+        "product_feedback.docx",
+        "user_survey.txt",
+        "customer_interviews.pdf",
+        "enterprise_interviews.md",
+        "support_tickets.md"
+      ],
+      "cited_sources": [
+        "product_feedback.docx",
+        "user_survey.txt",
+        "customer_interviews.pdf",
+        "enterprise_interviews.md",
+        "support_tickets.md"
+      ],
+      "recall": 0.0,
+      "citation_accuracy": 1.0,
+      "grounded_correct": false,
+      "is_insufficient_evidence_response": false
+    },
+    {
+      "id": "q10",
+      "question": "What do users say about Slack notifications?",
+      "should_be_insufficient": false,
+      "expected_sources": [
+        "customer_interviews.pdf",
+        "enterprise_interviews.md",
+        "support_tickets.md"
+      ],
+      "retrieved_sources": [
+        "product_feedback.docx",
+        "user_survey.txt",
+        "customer_interviews.pdf",
+        "enterprise_interviews.md",
+        "support_tickets.md"
+      ],
+      "cited_sources": [
+        "product_feedback.docx",
+        "user_survey.txt",
+        "customer_interviews.pdf",
+        "enterprise_interviews.md",
+        "support_tickets.md"
+      ],
+      "recall": 1.0,
+      "citation_accuracy": 0.6,
+      "grounded_correct": true,
+      "is_insufficient_evidence_response": false
+    },
+    {
+      "id": "q11",
+      "question": "How many customer comments mentioned setup difficulty during week 1?",
+      "should_be_insufficient": false,
+      "expected_sources": [
+        "customer_interviews.pdf",
+        "support_tickets.md"
+      ],
+      "retrieved_sources": [
+        "product_feedback.docx",
+        "user_survey.txt",
+        "customer_interviews.pdf",
+        "enterprise_interviews.md",
+        "support_tickets.md"
+      ],
+      "cited_sources": [
+        "product_feedback.docx",
+        "user_survey.txt",
+        "customer_interviews.pdf",
+        "enterprise_interviews.md",
+        "support_tickets.md"
+      ],
+      "recall": 1.0,
+      "citation_accuracy": 0.4,
+      "grounded_correct": true,
+      "is_insufficient_evidence_response": false
+    },
+    {
+      "id": "q12",
+      "question": "Why do users want two-way Jira synchronization?",
+      "should_be_insufficient": false,
+      "expected_sources": [
+        "enterprise_interviews.md",
+        "support_tickets.md"
+      ],
+      "retrieved_sources": [
+        "product_feedback.docx",
+        "user_survey.txt",
+        "customer_interviews.pdf",
+        "enterprise_interviews.md",
+        "support_tickets.md"
+      ],
+      "cited_sources": [
+        "product_feedback.docx",
+        "user_survey.txt",
+        "customer_interviews.pdf",
+        "enterprise_interviews.md",
+        "support_tickets.md"
+      ],
+      "recall": 1.0,
+      "citation_accuracy": 0.4,
+      "grounded_correct": true,
+      "is_insufficient_evidence_response": false
+    },
+    {
+      "id": "q13",
+      "question": "What is the employee count threshold for Enterprise prospects in our research?",
+      "should_be_insufficient": false,
+      "expected_sources": [
+        "enterprise_interviews.md"
+      ],
+      "retrieved_sources": [
+        "product_feedback.docx",
+        "user_survey.txt",
+        "customer_interviews.pdf",
+        "enterprise_interviews.md",
+        "support_tickets.md"
+      ],
+      "cited_sources": [
+        "product_feedback.docx",
+        "user_survey.txt",
+        "customer_interviews.pdf",
+        "enterprise_interviews.md",
+        "support_tickets.md"
+      ],
+      "recall": 1.0,
+      "citation_accuracy": 0.2,
+      "grounded_correct": true,
+      "is_insufficient_evidence_response": false
+    },
+    {
+      "id": "q14",
+      "question": "What is the office address of our San Francisco headquarters?",
+      "should_be_insufficient": true,
+      "expected_sources": [],
+      "retrieved_sources": [
+        "product_feedback.docx",
+        "user_survey.txt",
+        "customer_interviews.pdf",
+        "enterprise_interviews.md",
+        "support_tickets.md"
+      ],
+      "cited_sources": [
+        "product_feedback.docx",
+        "user_survey.txt",
+        "customer_interviews.pdf",
+        "enterprise_interviews.md",
+        "support_tickets.md"
+      ],
+      "recall": 0.0,
+      "citation_accuracy": 1.0,
+      "grounded_correct": false,
+      "is_insufficient_evidence_response": false
+    },
+    {
+      "id": "q15",
+      "question": "What issues do SMB users report when adding user seats?",
+      "should_be_insufficient": false,
+      "expected_sources": [
+        "user_survey.txt",
+        "support_tickets.md"
+      ],
+      "retrieved_sources": [
+        "product_feedback.docx",
+        "user_survey.txt",
+        "customer_interviews.pdf",
+        "enterprise_interviews.md",
+        "support_tickets.md"
+      ],
+      "cited_sources": [
+        "product_feedback.docx",
+        "user_survey.txt",
+        "customer_interviews.pdf",
+        "enterprise_interviews.md",
+        "support_tickets.md"
+      ],
+      "recall": 1.0,
+      "citation_accuracy": 0.4,
+      "grounded_correct": true,
+      "is_insufficient_evidence_response": false
+    }
+  ]
+}
