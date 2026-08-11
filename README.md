@@ -4,7 +4,8 @@
 
 ProductIQ is a portfolio-grade Retrieval-Augmented Generation (RAG) copilot designed for Product Managers, UX Researchers, and Founders. It ingests unstructured customer research documents (interviews, support tickets, user surveys, PRDs) and delivers evidence-backed, cited answers grounded strictly in source evidence.
 
-- **GitHub Repository**: [https://github.com/Snigdha28Personal/productiq-rag](https://github.com/Snigdha28Personal/productiq-rag)
+- 🌐 **Live Vercel Production App (HTTPS)**: [https://frontend-liard-eight-46.vercel.app](https://frontend-liard-eight-46.vercel.app)
+- 🐙 **GitHub Repository**: [https://github.com/Snigdha28Personal/productiq-rag](https://github.com/Snigdha28Personal/productiq-rag)
 
 ---
 
@@ -20,28 +21,13 @@ ProductIQ leverages a grounded RAG architecture that allows PMs to query their r
 
 ---
 
-## 🚀 Key Features
+## 🔒 Live HTTPS Deployment & Running Options
 
-1. **Multi-Format Document Ingestion**: Upload PDF, DOCX, TXT, and Markdown files with automatic text normalization and metadata extraction.
-2. **1-Click "Load Demo Research"**: Immediate indexing of 5 synthetic PM research files (PDF, DOCX, TXT, MD) across customer interviews, support tickets, and enterprise procurement notes for instant 1-click evaluation.
-3. **Semantic Vector Search & ChromaDB**: Chunking via a sliding-window strategy (600 tokens, 80 overlap) indexed into ChromaDB.
-4. **Dual Embedding Modes**:
-   - **OpenAI RAG Mode**: `text-embedding-3-small` + `gpt-4o-mini` when `OPENAI_API_KEY` is provided.
-   - **Local Demo Mode**: Deterministic 128D subword n-gram cosine vectorizer enabling keyless out-of-the-box evaluation.
-5. **Strict Grounding & Insufficient Evidence Guardrail**: Enforces explicit similarity thresholding. If evidence is lacking, ProductIQ explicitly states:
-   > *"I couldn't find enough evidence in your uploaded research to answer this confidently."*
-6. **Clickable Citations & Evidence Inspector Drawer**: Inline citation badges (`[1]`) slide out an inspector panel showing exact source document name, page number, chunk ID, and vector match score.
-7. **RAG Transparency / Debug Mode**: Toggleable debug panel displaying query embedding mode, top-k, similarity threshold, and raw retrieved chunks.
-8. **Insights Dashboard**: Extracted top pain points, SMB vs Enterprise segment breakdown, and high-impact feature request matrices with evidence confidence tags.
-9. **Local Product Analytics**: Built-in telemetry tracking questions asked, documents processed, average retrieval score, and citation click-through rate.
+### 1. Live Production Deployment on Vercel (HTTPS)
+ProductIQ is deployed and live on Vercel with an automatic SSL certificate:
+👉 **[https://frontend-liard-eight-46.vercel.app](https://frontend-liard-eight-46.vercel.app)**
 
----
-
-## 🔒 HTTP & HTTPS Execution Options
-
-ProductIQ supports running over both standard **HTTP** and encrypted **HTTPS** protocols locally and in production:
-
-### Option A: Standard HTTP (Local Development)
+### 2. Local HTTP Execution
 - **Frontend**: [http://localhost:3000](http://localhost:3000)
 - **Backend API**: [http://localhost:8000](http://localhost:8000)
 
@@ -53,24 +39,12 @@ npm run dev:frontend
 npm run dev:backend
 ```
 
-### Option B: Local HTTPS Execution (Self-Signed SSL)
-Next.js supports native experimental HTTPS locally:
-
+### 3. Local HTTPS Execution (Self-Signed SSL)
 ```bash
 # Run Frontend over HTTPS
 npm --prefix frontend run dev:https
 # App running at: https://localhost:3000
 ```
-
-To run FastAPI backend over HTTPS locally using Uvicorn with SSL certificates:
-```bash
-uvicorn backend.main:app --reload --port 8000 --ssl-keyfile=./key.pem --ssl-certfile=./cert.pem
-```
-
-### Option C: Production HTTPS Deployment (Vercel & Render)
-When deployed to cloud environments (Vercel for Frontend, Render/Fly.io for Backend), automatic free TLS/SSL certificates are provisioned:
-- **Frontend HTTPS**: `https://productiq-rag.vercel.app`
-- **Backend HTTPS**: `https://productiq-backend.onrender.com`
 
 ---
 
