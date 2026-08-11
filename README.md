@@ -4,6 +4,8 @@
 
 ProductIQ is a portfolio-grade Retrieval-Augmented Generation (RAG) copilot designed for Product Managers, UX Researchers, and Founders. It ingests unstructured customer research documents (interviews, support tickets, user surveys, PRDs) and delivers evidence-backed, cited answers grounded strictly in source evidence.
 
+- **GitHub Repository**: [https://github.com/Snigdha28Personal/productiq-rag](https://github.com/Snigdha28Personal/productiq-rag)
+
 ---
 
 ## 📌 Problem & Product Vision
@@ -35,7 +37,44 @@ ProductIQ leverages a grounded RAG architecture that allows PMs to query their r
 
 ---
 
-## 🏗️ Architecture & How It Works
+## 🔒 HTTP & HTTPS Execution Options
+
+ProductIQ supports running over both standard **HTTP** and encrypted **HTTPS** protocols locally and in production:
+
+### Option A: Standard HTTP (Local Development)
+- **Frontend**: [http://localhost:3000](http://localhost:3000)
+- **Backend API**: [http://localhost:8000](http://localhost:8000)
+
+```bash
+# Run Frontend (HTTP)
+npm run dev:frontend
+
+# Run Backend (HTTP)
+npm run dev:backend
+```
+
+### Option B: Local HTTPS Execution (Self-Signed SSL)
+Next.js supports native experimental HTTPS locally:
+
+```bash
+# Run Frontend over HTTPS
+npm --prefix frontend run dev:https
+# App running at: https://localhost:3000
+```
+
+To run FastAPI backend over HTTPS locally using Uvicorn with SSL certificates:
+```bash
+uvicorn backend.main:app --reload --port 8000 --ssl-keyfile=./key.pem --ssl-certfile=./cert.pem
+```
+
+### Option C: Production HTTPS Deployment (Vercel & Render)
+When deployed to cloud environments (Vercel for Frontend, Render/Fly.io for Backend), automatic free TLS/SSL certificates are provisioned:
+- **Frontend HTTPS**: `https://productiq-rag.vercel.app`
+- **Backend HTTPS**: `https://productiq-backend.onrender.com`
+
+---
+
+## 🏗️ Architecture & Technical Workflow
 
 ```mermaid
 flowchart TD
@@ -46,7 +85,7 @@ flowchart TD
     end
 
     subgraph Backend ["Python FastAPI Backend (Port 8000)"]
-        API[FastAPI Endpoints]
+        API[FastAPI Endpoints - HTTP & HTTPS CORS]
         
         subgraph Ingestion ["Ingestion & Preprocessing"]
             Parser[Parsers: PDF, DOCX, TXT, MD]
@@ -68,7 +107,7 @@ flowchart TD
         Insights[Insight Extractor Pipeline]
     end
 
-    UI -->|HTTP Requests| API
+    UI -->|HTTP / HTTPS Requests| API
     API --> Ingestion
     Parser --> Chunker
     Chunker --> Embedder
@@ -87,14 +126,6 @@ flowchart TD
 
 ProductIQ includes an automated RAG evaluation framework (`evaluation/evaluate.py`) tested against 15 curated benchmark questions (`evaluation/test_questions.json`).
 
-### Evaluation Metrics & Methodology
-
-- **Retrieval Recall@K**: Proportion of ground-truth target source documents retrieved in Top-K vector matches ($K=5$).
-- **Citation Accuracy**: Accuracy of generated inline citations matching target ground-truth source documents.
-- **Grounded Answer Rate**: Percentage of generated responses strictly backed by context and correctly triggering insufficient evidence guardrails on out-of-domain queries.
-
-### Empirical Benchmark Results
-
 ```
 ==================================================
      PRODUCTIQ RAG BENCHMARK EVALUATION           
@@ -103,50 +134,13 @@ Embedding Mode: Local Demo / OpenAI
 Top K Retrieval: 5
 --------------------------------------------------
 Total Benchmark Questions: 15
-Retrieval Recall@K:        93.3%
-Citation Accuracy:         91.7%
-Grounded Answer Rate:      93.3%
+Retrieval Recall@K:        80.0%
+Citation Accuracy:         61.3%
+Grounded Answer Rate:      80.0%
 --------------------------------------------------
 Full report saved to: evaluation/evaluation_report.json
 ==================================================
 ```
-
----
-
-## 💡 Product Management Decisions & Tradeoffs
-
-### 1. RAG vs. Fine-Tuning
-- **Decision**: Selected Retrieval-Augmented Generation (RAG) over model fine-tuning.
-- **Rationale**: Customer research documents are continuously updated. RAG allows instant indexing of new documents without expensive model retraining and enables exact source passage citation.
-
-### 2. Chunking Strategy (600 Tokens, 80 Overlap)
-- **Decision**: 600 token window with 80 token overlap.
-- **Rationale**: Smaller chunks (200 tokens) yielded higher keyword precision but lost surrounding interview context. 600 tokens preserves paragraph-level narrative while keeping vector retrieval crisp.
-
-### 3. Insufficient Evidence Guardrail
-- **Decision**: Enforced an explicit grounding rule instead of allowing generic LLM completions.
-- **Rationale**: PMs cannot afford hallucinated customer feedback when pitching roadmaps to executives. Rejecting low-confidence queries builds user trust.
-
----
-
-## 🧠 Mistakes & Technical Learnings
-
-1. **Answers Without Citations Reduced Trust**: Early versions outputted answer text without inline markers. Adding clickable citation badges (`[1]`) that open the Evidence Drawer solved the trust deficit.
-2. **Model-Aware Threshold Calibration**: Cosine similarity score distributions differ between OpenAI `text-embedding-3-small` and local vector embeddings. We configured distinct thresholds (`0.35` for OpenAI, `0.15` for Local Demo) to prevent false rejections.
-3. **Framing Insight Frequency**: Displaying raw percentage metrics on small datasets can be misleading. We explicitly label insights as *"Observed mentions in uploaded research"* with a methodological disclaimer.
-
----
-
-## 📈 Product Metrics & Roadmap
-
-### North Star Metric
-$$\text{Evidence-Backed Resolution Rate} = \frac{\text{Questions Answered with Verified Citation Clicks}}{\text{Total Research Questions Asked}}$$
-
-### Product Roadmap
-- **Phase 1 (MVP RAG - Complete)**: Grounded Q&A, multi-format ingestion, ChromaDB vector store, inline citations, Evidence Inspector Drawer, Insufficient Evidence guardrail, 1-Click Demo loader.
-- **Phase 2 (Insights & Analytics - Complete)**: Insights Dashboard, Enterprise vs SMB segment analysis, feature request matrix, local event telemetry logger.
-- **Phase 3 (Integrations & Teamwork)**: Slack notification bot, Jira backlog sync, user workspaces, hosted vector DB (Qdrant / Pinecone).
-- **Phase 4 (Continuous Intelligence)**: Automated research trend alerts, executive brief generation, and multi-document trend synthesis.
 
 ---
 
@@ -158,45 +152,37 @@ $$\text{Evidence-Backed Resolution Rate} = \frac{\text{Questions Answered with V
 
 ### 1. Clone Repository & Environment Setup
 ```bash
-git clone https://github.com/your-username/productiq-rag.git
+git clone https://github.com/Snigdha28Personal/productiq-rag.git
 cd productiq-rag
 
 # Copy environment template
 cp .env.example .env
 ```
 
-*(Note: `OPENAI_API_KEY` is optional. ProductIQ runs seamlessly out-of-the-box in **Local Demo Mode** without API credentials!)*
-
 ### 2. Start Backend Service (Python FastAPI)
 ```bash
-# Install Python backend dependencies
-python -m pip install "fastapi<0.100.0" uvicorn pypdf pytest
-
-# Start FastAPI server on port 8000
+python -m pip install "fastapi<0.100.0" uvicorn pypdf pytest python-multipart
 uvicorn backend.main:app --reload --port 8000
 ```
 
 ### 3. Start Frontend Service (Next.js 14)
 ```bash
-# Navigate to frontend directory
 cd frontend
 npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3000](http://localhost:3000) or [https://localhost:3000](https://localhost:3000) in your browser.
 
 ---
 
 ## 🧪 Running Tests & Evaluation
 
-### Run Automated Backend Unit Tests
 ```bash
+# Run backend unit tests
 pytest backend/tests
-```
 
-### Run RAG Benchmark Evaluation
-```bash
+# Run RAG evaluation suite
 python evaluation/evaluate.py
 ```
 
