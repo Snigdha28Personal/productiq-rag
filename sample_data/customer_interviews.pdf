@@ -1,0 +1,32 @@
+%PDF-1.4
+1 0 obj
+<</Type/Catalog/Pages 2 0 R>>
+endobj
+2 0 obj
+<</Type/Pages/Count 1/Kids[3 0 R]>>
+endobj
+3 0 obj
+<</Type/Page/MediaBox[0 0 612 792]/Parent 2 0 R/Resources<</Font<</F1 4 0 R>>>>/Contents 5 0 R>>
+endobj
+4 0 obj
+<</Type/Font/Subtype/Type1/BaseFont/Helvetica>>
+endobj
+5 0 obj
+<</Length 1217>>
+stream
+BT /F1 10 Tf 40 700 Td (ProductIQ Customer Interview Transcripts - Q1 2026) Tj T* ([SYNTHETIC DATASET FOR PRODUCT MANAGEMENT RAG EVALUATION]) Tj T* () Tj T* (Sarah Jenkins [Lead PM, E-Commerce]:) Tj T* (Configuring initial workspace settings took over 45 minutes and required support intervention.) Tj T* (The setup checklist was confusing and lacked inline contextual guidance.) Tj T* (14 customer comments mention difficulty completing setup during week 1.) Tj T* () Tj T* (Michael Chang [Head of UX, Logistics SaaS]:) Tj T* (Sharing insights with leadership requires manual screenshotting because PDF export is missing.) Tj T* (Custom chart filtering by date range is currently unavailable on our SMB plan.) Tj T* () Tj T* (David Ross [VP Product, Fintech Enterprise]:) Tj T* (Unexpected tier upgrades occurred without clear billing threshold warnings.) Tj T* (I didn't understand what I would actually be charged before checkout.) Tj T* (Our security team requires Okta SAML single sign-on and role-based access control.) Tj T* (Real-time Slack alerts for research insights are critical for our product team.) Tj T* (We had to build custom Zapier workflows because Jira sync isn't supported out-of-the-box.) Tj ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000052 00000 n 
+0000000101 00000 n 
+0000000212 00000 n 
+0000000283 00000 n 
+trailer
+<</Size 6/Root 1 0 R>>
+startxref
+420
+%%EOF

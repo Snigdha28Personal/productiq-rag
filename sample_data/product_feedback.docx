@@ -1,0 +1,15 @@
+# ProductIQ Product Feedback Synthesis Q1 2026
+
+[SYNTHETIC RESEARCH DATASET FOR PM RAG EVALUATION]
+
+## 1. Onboarding & Initial Setup Experience
+Configuring initial workspace settings took over 45 minutes and required support intervention. The setup checklist was confusing and lacked inline contextual guidance. 14 customer comments mention difficulty completing setup during the first week.
+
+## 2. Pricing & Subscription Model
+Customers frequently report difficulty understanding pricing before checkout. Unexpected tier upgrades occurred without clear billing threshold warnings. Seat count crossed from 10 to 11 resulting in higher than expected charges.
+
+## 3. Integrations & Workflow Automation
+Real-time Slack alerts for research insights are critical for our product team. We had to build custom Zapier workflows because Jira sync isn't supported out-of-the-box.
+
+## 4. Analytics & Reporting Exports
+Sharing insights with leadership requires manual screenshotting because PDF export is missing. Custom chart filtering by date range is currently unavailable.

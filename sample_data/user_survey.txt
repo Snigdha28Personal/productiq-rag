@@ -1,0 +1,19 @@
+==================================================
+PRODUCTIQ CUSTOMER RESEARCH SURVEY RESPONSES (N=25)
+==================================================
+[SYNTHETIC RESEARCH DATASET]
+
+Respondent #1 (Product Manager, SMB):
+"Onboarding setup is way too complicated. It took 3 days to get our research notes imported and organized. Configuring initial workspace settings took over 45 minutes and required support intervention."
+
+Respondent #2 (UX Researcher, Mid-Market):
+"We love the vector search capability, but sharing reports with executive stakeholders is painful. Sharing insights with leadership requires manual screenshotting because PDF export is missing. We urgently need a 1-click executive PDF export feature."
+
+Respondent #3 (Head of Product, Enterprise):
+"Our biggest blocker is security compliance. Until ProductIQ supports granular admin role permissions and SAML SSO, we cannot rollout to our 200-person PM org."
+
+Respondent #4 (Startup Founder):
+"Pricing is super confusing. The pricing page lists $49/mo, but when we added 2 team members, the invoice jumped to $149/mo without clear warning. Seat count crossed from 10 to 11."
+
+Respondent #5 (Senior PM, Enterprise):
+"Integration with Slack and Jira is our #1 feature request. Real-time Slack alerts for research insights are critical for our product team. We want customer feedback quotes automatically converted into Jira user stories."
