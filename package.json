@@ -1,0 +1,24 @@
+{
+  "name": "productiq-rag",
+  "version": "1.0.0",
+  "description": "Evidence-backed RAG copilot for product research, customer feedback, and PM decision-making.",
+  "scripts": {
+    "dev:backend": "uvicorn backend.main:app --reload --port 8000",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "build:frontend": "npm --prefix frontend run build",
+    "test:backend": "pytest backend/tests",
+    "evaluate": "python evaluation/evaluate.py"
+  },
+  "keywords": [
+    "rag",
+    "product-management",
+    "ai",
+    "llm",
+    "chromadb",
+    "fastapi",
+    "nextjs",
+    "research"
+  ],
+  "author": "ProductIQ Engineering",
+  "license": "MIT"
+}
