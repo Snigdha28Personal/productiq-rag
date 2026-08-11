@@ -22,10 +22,11 @@ app = FastAPI(
     description="Evidence-backed RAG Copilot for Product Research & Customer Insights"
 )
 
-# Configure CORS for Next.js frontend
+# Configure CORS for Next.js frontend (Supports both HTTP and HTTPS origins)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=settings.CORS_ORIGINS or ["*"],
+    allow_origin_regex=r"https?://.*",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

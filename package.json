@@ -5,6 +5,7 @@
   "scripts": {
     "dev:backend": "uvicorn backend.main:app --reload --port 8000",
     "dev:frontend": "npm --prefix frontend run dev",
+    "dev:frontend:https": "npm --prefix frontend run dev:https",
     "build:frontend": "npm --prefix frontend run build",
     "test:backend": "pytest backend/tests",
     "evaluate": "python evaluation/evaluate.py"

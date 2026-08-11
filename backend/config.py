@@ -41,6 +41,14 @@ class Settings:
     SAMPLE_DATA_DIR: Path = BASE_DIR / "sample_data"
     ANALYTICS_FILE: Path = BASE_DIR / "backend" / "analytics" / "events_log.json"
 
+    # CORS Origins (HTTP and HTTPS)
+    CORS_ORIGINS: list = [
+        o.strip() for o in os.getenv(
+            "CORS_ORIGINS", 
+            "http://localhost:3000,https://localhost:3000,http://127.0.0.1:3000,https://127.0.0.1:3000"
+        ).split(",") if o.strip()
+    ]
+
     @property
     def is_openai_available(self) -> bool:
         return bool(self.OPENAI_API_KEY and len(self.OPENAI_API_KEY) > 10)
