@@ -1,0 +1,161 @@
+[
+  {
+    "timestamp": "2026-08-11T23:37:13.904277",
+    "event_type": "demo_data_loaded",
+    "details": {
+      "total_documents": 4
+    }
+  },
+  {
+    "timestamp": "2026-08-11T23:37:13.921951",
+    "event_type": "demo_data_loaded",
+    "details": {
+      "total_documents": 4
+    }
+  },
+  {
+    "timestamp": "2026-08-11T23:37:13.999757",
+    "event_type": "question_asked",
+    "details": {
+      "query": "What are the top onboarding friction points?"
+    }
+  },
+  {
+    "timestamp": "2026-08-11T23:37:14.015627",
+    "event_type": "answer_generated",
+    "details": {
+      "query": "What are the top onboarding friction points?",
+      "is_insufficient_evidence": true,
+      "citations_count": 0,
+      "highest_similarity_score": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-08-11T23:37:14.167050",
+    "event_type": "question_asked",
+    "details": {
+      "query": "What is the capital of Mars?"
+    }
+  },
+  {
+    "timestamp": "2026-08-11T23:37:14.175351",
+    "event_type": "answer_generated",
+    "details": {
+      "query": "What is the capital of Mars?",
+      "is_insufficient_evidence": true,
+      "citations_count": 0,
+      "highest_similarity_score": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-08-11T23:37:14.233659",
+    "event_type": "insight_viewed",
+    "details": {}
+  },
+  {
+    "timestamp": "2026-08-11T23:37:21.398723",
+    "event_type": "demo_data_loaded",
+    "details": {
+      "total_documents": 4
+    }
+  },
+  {
+    "timestamp": "2026-08-11T23:37:21.411959",
+    "event_type": "demo_data_loaded",
+    "details": {
+      "total_documents": 4
+    }
+  },
+  {
+    "timestamp": "2026-08-11T23:37:21.464711",
+    "event_type": "question_asked",
+    "details": {
+      "query": "What are the top onboarding friction points?"
+    }
+  },
+  {
+    "timestamp": "2026-08-11T23:37:21.485762",
+    "event_type": "answer_generated",
+    "details": {
+      "query": "What are the top onboarding friction points?",
+      "is_insufficient_evidence": false,
+      "citations_count": 4,
+      "highest_similarity_score": 0.4308
+    }
+  },
+  {
+    "timestamp": "2026-08-11T23:37:21.530992",
+    "event_type": "question_asked",
+    "details": {
+      "query": "What is the capital of Mars?"
+    }
+  },
+  {
+    "timestamp": "2026-08-11T23:37:21.562846",
+    "event_type": "answer_generated",
+    "details": {
+      "query": "What is the capital of Mars?",
+      "is_insufficient_evidence": false,
+      "citations_count": 4,
+      "highest_similarity_score": 0.3401
+    }
+  },
+  {
+    "timestamp": "2026-08-11T23:37:21.697507",
+    "event_type": "insight_viewed",
+    "details": {}
+  },
+  {
+    "timestamp": "2026-08-11T23:37:27.496001",
+    "event_type": "demo_data_loaded",
+    "details": {
+      "total_documents": 4
+    }
+  },
+  {
+    "timestamp": "2026-08-11T23:37:27.504445",
+    "event_type": "demo_data_loaded",
+    "details": {
+      "total_documents": 4
+    }
+  },
+  {
+    "timestamp": "2026-08-11T23:37:27.590580",
+    "event_type": "question_asked",
+    "details": {
+      "query": "What are the top onboarding friction points?"
+    }
+  },
+  {
+    "timestamp": "2026-08-11T23:37:27.635518",
+    "event_type": "answer_generated",
+    "details": {
+      "query": "What are the top onboarding friction points?",
+      "is_insufficient_evidence": false,
+      "citations_count": 4,
+      "highest_similarity_score": 0.4308
+    }
+  },
+  {
+    "timestamp": "2026-08-11T23:37:27.670172",
+    "event_type": "question_asked",
+    "details": {
+      "query": "What is the capital of Mars?"
+    }
+  },
+  {
+    "timestamp": "2026-08-11T23:37:27.712858",
+    "event_type": "answer_generated",
+    "details": {
+      "query": "What is the capital of Mars?",
+      "is_insufficient_evidence": true,
+      "citations_count": 0,
+      "highest_similarity_score": 0.0
+    }
+  },
+  {
+    "timestamp": "2026-08-11T23:37:27.771283",
+    "event_type": "insight_viewed",
+    "details": {}
+  }
+]
